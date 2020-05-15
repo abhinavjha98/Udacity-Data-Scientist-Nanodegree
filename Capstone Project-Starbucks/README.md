@@ -25,7 +25,7 @@ To guide the project, the following questions were considered:
 
 ### 2. Prepare Data
 
-In the [helper.py]()
+In the [helper.py](https://github.com/abhinavjha98/Udacity-Data-Scientist-Nanodegree/blob/master/Capstone%20Project-Startbucks/helper.py)
 file, the `clean_portfolio`, `clean_profile` and `clean_transcript` functions are
 provided. They implement the following functionality:
 
