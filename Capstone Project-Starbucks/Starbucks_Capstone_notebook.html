@@ -13256,7 +13256,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">portfolio_clean</span> <span class="o">=</span> <span class="n">clean_portfolio</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># explore the clean portfolio</span>
+<span class="n">portfolio_clean</span> <span class="o">=</span> <span class="n">clean_portfolio</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13269,7 +13270,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profile_clean</span> <span class="o">=</span> <span class="n">clean_profile</span><span class="p">(</span><span class="n">profile</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># explore the clean profile</span>
+<span class="n">profile_clean</span> <span class="o">=</span> <span class="n">clean_profile</span><span class="p">(</span><span class="n">profile</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13282,7 +13284,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transcript_clean</span> <span class="o">=</span> <span class="n">clean_transcript</span><span class="p">(</span><span class="n">transcript</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># explore the clean transcript</span>
+<span class="n">transcript_clean</span> <span class="o">=</span> <span class="n">clean_transcript</span><span class="p">(</span><span class="n">transcript</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13609,10 +13612,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#finding the offer recieved with respect to Offer type </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">event_offer_received</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">offer_type</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Offer Type&#39;</span><span class="p">);</span>
 
+<span class="c1">#finding the offer recieved with respect to Offer ID</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">event_offer_received</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">offer_id</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Offer ID&#39;</span><span class="p">);</span>
@@ -13727,6 +13732,7 @@ Name: offer_id, dtype: int64</pre>
 
 <span class="n">bins</span> <span class="o">=</span> <span class="mi">400</span>
 
+<span class="c1">#visualising the average transaction w.r.t to average transaction</span>
 <span class="n">avg_transaction</span> <span class="o">=</span> <span class="n">customers</span><span class="p">[</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">total_expense</span> <span class="o">/</span> <span class="n">customers</span><span class="p">[</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">total_transactions</span>
 <span class="n">avg_transaction</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
@@ -13735,7 +13741,7 @@ Name: offer_id, dtype: int64</pre>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">();</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
 
-
+<span class="c1">#visualising the total expenses w.r.t to average transaction</span>
 <span class="n">bins</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">customers</span><span class="p">[</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">total_expense</span><span class="p">,</span> <span class="n">bins</span><span class="p">);</span>
@@ -13786,11 +13792,13 @@ Name: offer_id, dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
+<span class="c1">#finding the number of people w.r.t to gender</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
 <span class="n">customers</span><span class="o">.</span><span class="n">gender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of People&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 
+<span class="c1">#plotting the income </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
 <span class="n">cust_income</span> <span class="o">=</span> <span class="n">customers</span><span class="p">[</span><span class="n">customers</span><span class="o">.</span><span class="n">income_group</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">income</span><span class="c1">#_group.value_counts().reindex(range(30000, 111000,10000))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">cust_income</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -13844,6 +13852,7 @@ Name: offer_id, dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
+<span class="c1">#finding the average transaction w.r.t to gender</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
 <span class="n">gender_groupby</span> <span class="o">=</span> <span class="n">customers</span><span class="p">[</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span>
 <span class="n">gender_transacts</span> <span class="o">=</span> <span class="n">gender_groupby</span><span class="o">.</span><span class="n">total_transactions</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13854,6 +13863,7 @@ Name: offer_id, dtype: int64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)</span>
 
+<span class="c1">#visualising the total expenses w.r.t to gender</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">gender_groupby</span><span class="o">.</span><span class="n">total_expense</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Expense&#39;</span><span class="p">);</span>
@@ -13917,6 +13927,7 @@ Name: offer_id, dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
+<span class="c1">#visualising the average transaction value w.r.t to customer&#39;s income</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
 <span class="n">income_groupby</span> <span class="o">=</span> <span class="n">customers</span><span class="p">[(</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">customers</span><span class="o">.</span><span class="n">income_group</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;income_group&#39;</span><span class="p">)</span>
 <span class="n">income_transacts</span> <span class="o">=</span> <span class="n">income_groupby</span><span class="o">.</span><span class="n">total_transactions</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13928,6 +13939,7 @@ Name: offer_id, dtype: int64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
 
+<span class="c1">#visualising the total expenses w.r.t to customer&#39;s income</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">income_groupby</span><span class="o">.</span><span class="n">total_expense</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30000</span><span class="p">,</span> <span class="mi">111000</span><span class="p">,</span><span class="mi">10000</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Expense&#39;</span><span class="p">);</span>
@@ -13992,7 +14004,7 @@ Name: offer_id, dtype: int64</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
-
+<span class="c1">#visualising the average transaction value w.r.t to age</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
 <span class="n">age_groupby</span> <span class="o">=</span> <span class="n">customers</span><span class="p">[(</span><span class="n">customers</span><span class="o">.</span><span class="n">valid</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">customers</span><span class="o">.</span><span class="n">income_group</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;age_group&#39;</span><span class="p">)</span>
 <span class="n">age_transacts</span> <span class="o">=</span> <span class="n">age_groupby</span><span class="o">.</span><span class="n">total_transactions</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -14004,7 +14016,7 @@ Name: offer_id, dtype: int64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">)</span>
 
-
+<span class="c1">#visualising the total expense value w.r.t to age</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">age_groupby</span><span class="o">.</span><span class="n">total_expense</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Expense&#39;</span><span class="p">);</span>
@@ -14082,7 +14094,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;bogo&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#visualising the transaction w.r.t to offer kind</span>
+<span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;bogo&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14117,7 +14130,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;discount&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#visualising the average transaction value w.r.t to discount</span>
+<span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;discount&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14152,7 +14166,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;informational&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#visualising the average transaction value w.r.t to informational</span>
+<span class="n">plot_offer_expense</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;informational&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -25736,7 +25751,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">offers</span> <span class="o">=</span> <span class="n">get_most_popular_offers</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#getting the offer count</span>
+<span class="n">offers</span> <span class="o">=</span> <span class="n">get_most_popular_offers</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">offers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -25770,7 +25786,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_offer_expense_by</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#visualising the expenses and transaction values w.r.t to B2 offer</span>
+<span class="n">plot_offer_expense_by</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -25828,7 +25845,8 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">offers</span> <span class="o">=</span> <span class="n">get_most_popular_offers_filtered</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">income</span><span class="o">=</span><span class="mi">95000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#filtering the offer</span>
+<span class="n">offers</span> <span class="o">=</span> <span class="n">get_most_popular_offers_filtered</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="n">n_top</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">income</span><span class="o">=</span><span class="mi">95000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">offers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -25862,12 +25880,14 @@ Name: offer_id, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">offer</span> <span class="o">=</span> <span class="s1">&#39;B3&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#choosing the offer B3  </span>
+<span class="n">offer</span> <span class="o">=</span> <span class="s1">&#39;B3&#39;</span>
 <span class="n">rcv_by</span><span class="p">,</span> <span class="n">vwd_by</span><span class="p">,</span> <span class="n">cpd_by</span> <span class="o">=</span> <span class="n">get_offer_stat_by</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="s1">&#39;net_expense&#39;</span><span class="p">,</span> <span class="n">offer</span><span class="p">,</span> <span class="s1">&#39;income_group&#39;</span><span class="p">,</span> <span class="n">aggr</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
 <span class="n">rcv_avg_by</span><span class="p">,</span> <span class="n">vwd_avg_by</span><span class="p">,</span> <span class="n">cpd_avg_by</span> <span class="o">=</span> <span class="n">get_average_expense_by</span><span class="p">(</span><span class="n">customers</span><span class="p">,</span> <span class="n">offer</span><span class="p">,</span> <span class="s1">&#39;income_group&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
+<span class="c1">#visualising the net expenses of offer B3</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rcv_by</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">-received&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">offer</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vwd_by</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">-viewed&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">offer</span><span class="p">))</span>
@@ -25876,6 +25896,7 @@ Name: offer_id, dtype: int64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Net Expense&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 
+<span class="c1">#visualising the avera of offer B3</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rcv_avg_by</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">-received&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">offer</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vwd_avg_by</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">-viewed&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">offer</span><span class="p">))</span>
